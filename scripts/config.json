@@ -1,0 +1,48 @@
+{ 
+  "DIR" :
+    {
+      "ROOT_DIR" : "/home/__user",
+      "PROJ_DIR" : "/home/__user/P2P_Fed",
+      "DATA_DIR" : "/home/__user/P2P_Fed/data/dat"
+    },
+  "ADDR" :
+    {
+      "HELPER" : "X.X.X.X", 
+      "SERVER" : "X.X.X.X",
+      
+      "comment:__hostip is the ip of this machine":".",
+      "HOSTIP" : "X.X.X.X",
+      "HOSTLIST" : [
+        "X.X.X.X", "X.X.X.X"
+      ],
+      "NODENUM" : [
+        16, 16
+      ]
+    },
+  "ML_CONFIG" :
+    {
+      "comment:__model could be" : "ResNet18 | SimpleCNN | RNN_Shakespeare",
+      "MODEL" : "SimpleCNN", 
+
+      "comment:__model2 could be" : "resnet18 | cnn | lstm",
+      "MODEL2" : "cnn",
+
+      "comment:__data could be" : "cifar10 | cifar100 | mnist | fmnist | shakespeare",
+      "DATA" : "mnist"
+    },
+  "FL_CONFIG" :
+    {
+      "comment:__the option iid only for CIFAR10." : "noniid | iid (only for cifar10)",
+      "IID" : "noniid",
+
+      "comment:__slow means" : "the number of straggers",
+      "SLOW" : 8,
+      "RUNTIME" : 100
+    },
+  "ETC" :
+    {
+      "IMAGENAME" : "__docker_image",
+      "CONDA_DIR" : "/home/__user/anaconda3/bin/activate", 
+      "CONDA_ENV" : "__conda_env"
+    }
+}
