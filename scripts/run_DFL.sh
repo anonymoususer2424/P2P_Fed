@@ -44,7 +44,7 @@ do
 		hosti=${hostslist[$(( i ))]}
 		echo "host$i | start with $hnum containers"
 		ssh -p 6304 $hosti "hostname"
-		ssh -p 6304 $hosti "cd $proj_dir&& bash scripts/docker_10g.sh -S $total -N $hnum -I $index $conf $helper:27000 ${array[1]} ${array[2]}&"&
+		ssh -p 6304 $hosti "cd $proj_dir&& bash scripts/DFL_node.sh -S $total -N $hnum -I $index $conf $helper:27000 ${array[1]} ${array[2]}&"&
 		if [ "$conf" = "-C" ] || [ "$conf" = "-G" ] || [ "$conf" = "-R" ]; then
 			pids+=($!)
 		fi
